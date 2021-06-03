@@ -50,7 +50,18 @@ class FlavorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // 設定 Databinding
+        /**
+         * This may be the first time you're seeing the apply function in Kotlin.
+         * apply is a scope function in the Kotlin standard library.
+         * It executes a block of code within the context of an object.
+         * It forms a temporary scope, and in that scope,
+         * you can access the object without its name.
+         * The common use case for apply is to configure an object.
+         * Such calls can be read as "apply the following assignments to the object."
+         */
         binding?.apply {
+            viewModel = sharedViewModel
             nextButton.setOnClickListener { goToNextScreen() }
         }
     }
