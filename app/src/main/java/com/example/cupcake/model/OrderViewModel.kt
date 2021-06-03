@@ -45,4 +45,11 @@ class OrderViewModel : ViewModel() {
     fun setDate(pickupDate: String) {
         _date.value = pickupDate
     }
+
+    /**
+     * 檢查該訂單是否有選口味了
+     */
+    fun hasNoFlavorSet(): Boolean {
+        return _flavor.value.isNullOrEmpty()
+    }
 }
