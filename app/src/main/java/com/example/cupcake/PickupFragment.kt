@@ -54,7 +54,7 @@ class PickupFragment : Fragment() {
             viewModel = sharedViewModel
             // 綁定生命週期
             lifecycleOwner = viewLifecycleOwner
-            nextButton.setOnClickListener { goToNextScreen() }
+            pickupFragment = this@PickupFragment
         }
     }
 
